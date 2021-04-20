@@ -1,0 +1,50 @@
+
+<div class='card'>
+    <form (ngSubmit)="editMenu()" class='bg-pic'>
+<div class='card-header'>
+ Edit Menu
+</div>
+<div class='card-body'>            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+        <tbody>
+            <tr>
+                <td> <label>Menu Id</label></td>
+                <td> <input type="text" name="p_id" [(ngModel)]="menuItem.menuId"/></td>
+            </tr>
+            <tr>
+                <td><label>Menu Name</label></td>
+                <td><input type="text" name="p_name" [(ngModel)]="menuItem.menuName"/></td>
+            </tr>
+            <tr>
+                <td><label>Main Ingredients</label></td>
+                <td><input type="text" name="p_code" [(ngModel)]="menuItem.menuCode"/></td>
+            </tr>
+            <tr>
+                <td><label>Available</label></td>
+                <td><input type="text" name="p_releasedate" [(ngModel)]="menuItem.releaseDate"/></td>
+            </tr>
+            <tr>
+                <td><label>Product Description</label></td>
+                <td><input type="text" name="p_description" [(ngModel)]="menuItem.description"/></td>
+            </tr>
+            <tr>
+                <td><label>Price</label></td>
+                <td><input type="text" name="p_price" [(ngModel)]="menuItem.price"/></td>
+            </tr>
+            <tr>
+                <td><label>imageUrl</label></td>
+                <td><input type="file" name="p_imageurl" [(ngModel)]="menuItem.imageUrl"/></td>
+            </tr>
+           
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>                  
+              </tr>             
+            </tbody>
+    </table>
+  </div>
+</div>
+</form>
+</div>

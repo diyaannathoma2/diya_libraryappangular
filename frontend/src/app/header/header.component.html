@@ -1,0 +1,24 @@
+<h1>{{title}}</h1>
+<div class="card-header">
+<ul class="navbar-nav navbar-right">
+    <a class="nav-link" routerLink='/' *ngIf="_auth.loggedIn() && _auth.rolesVerify()" >Books</a>
+    <a class="nav-link" routerLink= '/add' *ngIf="_auth.loggedIn() && _auth.rolesVerify()" style="cursor:pointer">Add Book</a>
+
+
+
+
+
+    <a class="nav-link" routerLink= '/login' *ngIf="!_auth.loggedIn()" routerLinkActive="active">Login</a>
+    <a class="nav-link" style="cursor: pointer;" *ngIf="_auth.loggedIn()" (click)="logoutUser()">Logout</a>
+
+
+
+
+
+    <a class="nav-link" routerLink='/signup' *ngIf="!_auth.loggedIn()">SignUp</a>
+</ul>
+
+
+
+
+</div>

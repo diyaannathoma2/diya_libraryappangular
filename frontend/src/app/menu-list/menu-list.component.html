@@ -1,0 +1,60 @@
+<div class='card'>
+    <div class='card-header'>
+        {{title}}
+    </div>
+    <div class="card-body">
+        <div class='table-responsive'>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button class="btn btn-primary">
+                                Show image
+                            </button>
+                        </th>
+                        <th>Books</th>
+                        <th>Author</th>
+                        <th>available</th>
+                        <th>genre</th>
+                        
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let men of menu'>
+                        <td><img [src] = 'men.imageUrl'
+                            [title] = 'men.menuName'
+                            [style.width.px] = 'imageWidth'
+                            [style.margin.px] = 'imageMargin'>
+
+                        </td>
+                        <td>{{ men.menuName }}</td>
+                        <td>{{ men.menuCode }}</td>
+                        <td>{{ men.releaseDate }}</td>
+                        <td>{{ men.price }}</td>
+                        <!-- <td>
+                            <button class="btn btn-danger" style="cursor:pointer" (click)="deleteMenu(menu)"> Delete</button>
+                          </td> -->
+                          <!-- *ngIf="_auth.loggedIn()" -->
+
+
+
+
+
+                          <td>
+                            <button class="btn btn-warning" style="cursor:pointer"  *ngIf="_auth.loggedIn() && _auth.rolesVerify()" (click)="editMenu(men)"  style="margin-left: 20px;"> Edit</button>
+                          </td>
+                          <td>
+                            <button class="btn btn-danger" style="cursor:pointer"  *ngIf="_auth.loggedIn() && _auth.rolesVerify()"  (click)="deleteMenu(men)">  Delete</button>
+                          </td>
+                          <!-- (click)="editMenu(men)" -->
+                          <!-- (click)="deleteMenu(men)" -->
+                        
+
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

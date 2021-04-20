@@ -1,0 +1,9 @@
+div{
+    background-color: rgb(119, 119, 158);
+    
+    padding: 5px;
+}
+td{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+}
